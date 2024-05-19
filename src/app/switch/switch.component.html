@@ -1,0 +1,25 @@
+<div>
+    <label for="options">Please select the Brand : </label>
+    <select  name="" id="options" [(ngModel)] = "MySelect">
+        <option value="Dell">Dell</option>
+        <option value="Hp">Hp</option>
+        <option value="Asus">Asus</option>
+    </select>
+</div>
+<br>
+
+<div [ngSwitch] = "MySelect">
+    <div *ngSwitchCase="'Dell'">
+        <img src="assets/dell.jpeg" alt="Dell" >
+        <p>Dell Inc. is an American technology company that develops, sells, repairs, and supports computers and related products and services. <br>Dell is owned by its parent company, Dell Technologies.</p>
+    </div>
+    <div *ngSwitchCase="'Hp'">
+        <img src="assets/hp.jpg" alt="hp" width="200px" height="100px">
+        <p>HP offers a variety of products including laptops, desktops, printers, and more, catering to both personal and business needs.</p>
+    </div>
+
+    <div *ngSwitchCase="'Asus'">
+        <img src="assets/asus.jpeg" alt="asus">
+        <p>Lenovo is known for its innovation in personal computing, with popular lines like the ThinkPad and Yoga series.</p>
+    </div>
+</div>
