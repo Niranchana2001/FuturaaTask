@@ -1,0 +1,9 @@
+<p><b>Task 2</b></p>
+
+Add Product : <input type="text" name="" id=""  [(ngModel)]="pName" ><br><br>
+<button (click) = "createProduct()" >Create Product</button>
+
+<p *ngIf="!hideToggle">Toggle</p>
+<ol>
+    <li *ngFor="let product of productList; let i = index" [ngStyle]="getStyle(i)" class="product-box">{{product}}</li>
+</ol>
